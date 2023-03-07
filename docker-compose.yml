@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+
+  run:
+    build:
+        context: ./face_recognition
+        dockerfile: Dockerfile
+    volumes:
+      - .:/root
+    image: run
+    container_name: run
+    command: python3 root/run.py
