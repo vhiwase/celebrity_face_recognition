@@ -11,3 +11,13 @@ services:
     image: run
     container_name: run
     command: python3 root/run.py
+
+  predict:
+    image: run
+    container_name: predict
+    volumes:
+        - .:/root
+    command: python3 root/predict.py
+    depends_on:
+      - run
+
