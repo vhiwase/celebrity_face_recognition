@@ -38,7 +38,20 @@ Step 5: Once you are inside the container, change the directory to the root fold
 cd root
 ```
 
-Step 6: Copy any image file to the ```input_image``` folder, but make sure that the image belongs to one of the persons listed below, as the face recognition model is being trained for these persons:
+Step 6: To train the model encoding, execute the following command:
+```
+python train.py
+```
+This command will run the training process and generate two files named known_face_encoding.pkl and known_face_names.pkl in the root folder. These files will contain the fine-tuned model encoding.
+
+Step 7:  To test the model encoding, execute the following command:
+```
+python train.py
+```
+This command will run the testing process and create a folder named Test_Output inside the dataset folder. You can visit this folder and validate the model predictions yourself.
+
+
+Step 8: Copy any image file to the ```input_image``` folder, but make sure that the image belongs to one of the persons listed below, as the face recognition model is being trained for these persons:
 
 ['Akshay Kumar',
 'Alexandra Daddario',
@@ -72,7 +85,7 @@ Step 6: Copy any image file to the ```input_image``` folder, but make sure that 
 'Virat Kohli',
 'Zac Efron']
 
-Step 7: Finally, execute the Python script by running the following command:
+Step 9: Finally, execute the Python script by running the following command:
 
 ```
 python predict.py
